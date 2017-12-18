@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>老张不服老</title>
+    <link>https://Johnleegy.github.io/</link>
+    <description>Recent content on 老张不服老</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>版权所有，看好带走</copyright>
+    <lastBuildDate>Sat, 16 Dec 2017 20:57:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://Johnleegy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用hugo建静态博客记录</title>
+      <link>https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 16 Dec 2017 20:57:12 +0800</pubDate>
+      
+      <guid>https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;h1 id=&#34;起因&#34;&gt;起因&lt;/h1&gt;
+
+&lt;p&gt;前后累计折腾近6个小时，总算把搭建hugo静态博客的整个过程搞清楚了。为什么用了这么久？主要还是想偷懒，不喜欢读英文说明。那就用中文记录一下过程吧。还是中文顺眼啊。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

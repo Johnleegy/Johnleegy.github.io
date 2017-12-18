@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>使用hugo建静态博客记录 &middot; 老张不服老</title>
+    <meta name="generator" content="Hugo 0.31.1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="老张不服老">
+    
+      <meta name="description" content="说了不做，做了不说">
+    
+    
+    <link rel="canonical" href="https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/"/>
+    <link rel="icon" href="https://Johnleegy.github.io/favicon.ico">
+    <link rel="apple-touch-icon" href="https://Johnleegy.github.io/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://Johnleegy.github.io/css/style.css">
+    <link rel="stylesheet" href="https://Johnleegy.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://Johnleegy.github.io/css/monokai.css">
+    <link rel="stylesheet" href="https://Johnleegy.github.io/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="使用hugo建静态博客记录" />
+<meta property="og:description" content="起因
+
+前后累计折腾近6个小时，总算把搭建hugo静态博客的整个过程搞清楚了。为什么用了这么久？主要还是想偷懒，不喜欢读英文说明。那就用中文记录一下过程吧。还是中文顺眼啊。
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" />
+
+
+
+<meta property="article:published_time" content="2017-12-16T20:57:12&#43;08:00"/>
+
+<meta property="article:modified_time" content="2017-12-16T20:57:12&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="使用hugo建静态博客记录">
+<meta itemprop="description" content="起因
+
+前后累计折腾近6个小时，总算把搭建hugo静态博客的整个过程搞清楚了。为什么用了这么久？主要还是想偷懒，不喜欢读英文说明。那就用中文记录一下过程吧。还是中文顺眼啊。
+
+">
+
+
+<meta itemprop="datePublished" content="2017-12-16T20:57:12&#43;08:00" />
+<meta itemprop="dateModified" content="2017-12-16T20:57:12&#43;08:00" />
+<meta itemprop="wordCount" content="38">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="使用hugo建静态博客记录"/>
+<meta name="twitter:description" content="起因
+
+前后累计折腾近6个小时，总算把搭建hugo静态博客的整个过程搞清楚了。为什么用了这么久？主要还是想偷懒，不喜欢读英文说明。那就用中文记录一下过程吧。还是中文顺眼啊。
+
+"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://Johnleegy.github.io/" id="logo">
+          
+          <i class="logo" style="background-image: url('https://Johnleegy.github.io/css/images/logo.png')"></i>
+          
+          <span class="site-title">老张不服老</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://Johnleegy.github.io/">首页</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://Johnleegy.github.io/tags/">标签</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://Johnleegy.github.io/categories/">类目</a>
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">关于老张</a>
+          
+
+          
+          
+          
+          
+          
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://Johnleegy.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="搜索">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://Johnleegy.github.io/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://Johnleegy.github.io/">首页</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://Johnleegy.github.io/tags/">标签</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://Johnleegy.github.io/categories/">类目</a></td>
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">关于老张</a></td>
+          
+
+          
+          
+          
+          
+          
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://Johnleegy.github.io/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/79d0970fd8422a04dcef1d16a990b0ff?s=100&d=identicon"/>
+      
+      <h2 id="name">老张不服老</h2>
+      <h3 id="title">自由人★爱国者★空想家</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>大中国</span>
+      
+          <a id="follow" href="https://Johnleegy.github.io">
+              他的站点
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        1
+        <span>文章数</span>
+      </div>
+      <div class="article-info-block">
+        
+          0
+        
+        <span>
+            标签数
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/Johnleegy/Johnleegy.github.io" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <td><a href="https://Johnleegy.github.io/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/">
+    <h1 class="article-title" itemprop="name">
+        使用hugo建静态博客记录
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-12-16 20:57:12 &#43;0800 CST" itemprop="datePublished">2017-12-16</time>
+            &middot;
+            38
+            行
+            &middot;
+            1
+            分钟读完
+        </div>
+        
+        
+            
+            
+        
+
+        
+            
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="起因">起因</h1>
+
+<p>前后累计折腾近6个小时，总算把搭建hugo静态博客的整个过程搞清楚了。为什么用了这么久？主要还是想偷懒，不喜欢读英文说明。那就用中文记录一下过程吧。还是中文顺眼啊。</p>
+
+<p></p>
+
+<p>某日发现自己有展示些东西给外网的需求，又不想通过DDNS在本地电脑上架设服务器，于是决定建一个免费网站。以前帮朋友们建过几个免费网站，知道免费空间大多有种限制或者要有广告。但我只需要展示一两个静态网页就足够，为此还要接受广告心里不爽。在各种搜索下，终于确定github page就是最合适的方案。</p>
+
+<p>不想自己手动逐项设置，打算找一个工具。大部分静态博客生成器都需要依赖环境，唯有hugo只需要一个可执行文件就够，深得我心，况且据说它的性能远超侪辈，得，就它了。</p>
+
+<p>下面这些步骤都是必须的。初次操作的请照着做，可以少走弯路。</p>
+
+<h1 id="下载与安装">下载与安装</h1>
+
+<p>对hugo来说，这几乎不需要任何说明。下载到的是一个exe单文件，不需要安装，随便扔到哪个目录下就可以运行。为了不用每次都输入绝对路径，最好把它添加到系统环境路径PATH中。
+<a href="https://github.com/gohugoio/hugo/releases">下载页面</a></p>
+
+<p>不会加入系统路径的请自行百度，或者放弃阅读本文，呵呵了。我就不说这个了。</p>
+
+<h1 id="搭建博客">搭建博客</h1>
+
+<h2 id="一-基本步骤">一、基本步骤</h2>
+
+<ol>
+<li>选择或创建放置博客的目录。</li>
+<li>创建博客目录结构。</li>
+<li>下载模板。</li>
+<li>设置模板。</li>
+<li>创建一篇博客。</li>
+<li>同步到托管网站。</li>
+</ol>
+
+<h2 id="二-详细说明">二、详细说明</h2>
+
+<blockquote>
+<p>以下过程假设你已经设置好hugo程序路径。</p>
+</blockquote>
+
+<ol>
+<li><p>选择或创建放置博客的目录。必需是空目录否则执行命令时会报错。</p></li>
+
+<li><p>创建博客目录结构。</p></li>
+
+<li><p>下载模板。</p></li>
+
+<li><p>设置模板。</p></li>
+
+<li><p>创建一篇博客。</p></li>
+
+<li><p>同步到托管网站。</p></li>
+
+<li><p>首先选择好要放博客的目录，命令行下进入该目录执行hugo new site命令，然后目录下会生成一些子目录与文件。</p></li>
+
+<li><p>下载一个模板。若没安装git，可以直接到github网站下载。
+我使用的模板是 <a href="https://github.com/digitalcraftsman/hugo-icarus-theme/archive/master.zip">icarus(点击下载)</a> 。
+下载后解压，将文件夹名字从hugo-icarus-theme-master改为hugo-icarus-theme，放到themes文件夹下。</p></li>
+
+<li><p>设置模板。</p></li>
+
+<li><p>编辑文章。</p></li>
+
+<li><p>预览。</p></li>
+
+<li><p>发送到托管网站。</p></li>
+</ol>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" data-id="04a4145573fef9dfed5085d551344ced" class="article-share-link">
+        <i class="fa fa-share"></i>
+        分享
+    </a>
+    
+    <a href="https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/#disqus_thread" class="article-comment-link">
+        评论
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+
+</article>
+
+
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "spf13" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        最近文章
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    
+                    <p class="item-title"><a href="https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="title">使用hugo建静态博客记录</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-12-16 20:57:12 &#43;0800 CST" itemprop="datePublished">2017-12-16</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      版权所有，看好带走
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://Johnleegy.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://Johnleegy.github.io/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>
