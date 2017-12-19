@@ -7,26 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>版权所有，看好带走</copyright>
-    <lastBuildDate>Tue, 19 Dec 2017 11:14:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Dec 2017 20:57:12 +0800</lastBuildDate>
     
 	<atom:link href="https://Johnleegy.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>自建静态博客是鸡肋</title>
-      <link>https://Johnleegy.github.io/2017/12/19/%E8%87%AA%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%98%AF%E9%B8%A1%E8%82%8B/</link>
-      <pubDate>Tue, 19 Dec 2017 11:14:55 +0800</pubDate>
-      
-      <guid>https://Johnleegy.github.io/2017/12/19/%E8%87%AA%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%98%AF%E9%B8%A1%E8%82%8B/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>使用hugo建静态博客的记录</title>
-      <link>https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
+      <title>用hugo建博客的记录</title>
+      <link>https://Johnleegy.github.io/2017/12/16/%E7%94%A8hugo%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Sat, 16 Dec 2017 20:57:12 +0800</pubDate>
       
-      <guid>https://Johnleegy.github.io/2017/12/16/%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://Johnleegy.github.io/2017/12/16/%E7%94%A8hugo%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AE%B0%E5%BD%95/</guid>
       <description>&lt;h1 id=&#34;起因&#34;&gt;起因&lt;/h1&gt;
 
 &lt;p&gt;前后累计折腾近6个小时，总算把搭建hugo静态博客的整个过程搞清楚了。为什么用了这么久？主要还是想偷懒，不喜欢读英文说明。那就用中文记录一下过程吧。还是中文顺眼啊。&lt;/p&gt;
